@@ -1,0 +1,17 @@
+[user]
+	name = Johanna Hultberg
+	email = johanna.chultberg@gmail.com
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+
+[push]
+	default = simple
+
+[merge]
+	ff = only
+
+[alias]
+	st = status
