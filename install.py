@@ -35,9 +35,13 @@ def confirm(prompt, *, default):
 def install_pkg(pkg_name):
     pkg_path = Path(base_path, pkg_name)
 
+    setup_path = Path(pkg_path, "setup")
+
     for root, _, files in os.walk(pkg_path):
         for file in files:
             path = Path(root, file)
+            if path == setup_path:
+                continue
             rel_path = path.relative_to(pkg_path)
             link_path = Path.home() / rel_path
             link_target = relative_to(path, link_path.parent)
@@ -52,6 +56,8 @@ def install_pkg(pkg_name):
                     continue
                 link_path.unlink()
             link_path.symlink_to(link_target)
+    if setup_path.exists():
+        check_output([str(setup_path)])
 
 
 pkg_names = sys.argv[1:]
