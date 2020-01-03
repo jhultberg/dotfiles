@@ -15,3 +15,9 @@
 
 [alias]
 	st = status
+    br = branch
+    co = checkout
+    cano = "commit -amend --no-edit"
+
+[core]
+    editor = nvim

@@ -64,7 +64,7 @@ pkg_names = sys.argv[1:]
 if not pkg_names and confirm(
     "Do you want to install all packages? [Y/n] ", default=True
 ):
-    pkg_names = set(os.listdir()) - {".git", "install.py"}
+    pkg_names = set(os.listdir()) - {".git", "install.py", "README.rst"}
 
 
 for pkg in pkg_names:
