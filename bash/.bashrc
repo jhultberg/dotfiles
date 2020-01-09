@@ -12,6 +12,8 @@ elif [ $(uname) == "Darwin" ]; then
 	export CLICOLOR="1"
 	export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
+    alias ll="ls -l"
+
 	# Ensure Homebrew is installed ([] must not be used in if)
 	if hash brew 2>/dev/null; then
 		# Add auto-complete support
