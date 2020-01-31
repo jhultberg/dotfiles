@@ -38,6 +38,9 @@ set expandtab  " Tab is spaces
 set shiftwidth=4 softtabstop=4  " Tab is 4 spaces
 set directory=~/.vim/swapfiles//  " Put swapfiles in a better place
 
+" To be able to use fs.watch()/parcel watch for continious recompiling
+set backupcopy=yes
+
 " Load a virtualenv version of Python for plugins
 let g:python_host_prog = expand("~") . "/.vim/python3-venv/bin/python"
 let g:python3_host_prog = expand("~") . "/.vim/python3-venv/bin/python"
